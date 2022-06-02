@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.underlineKhuselo1 {
+    font-size: x-large;
+    border-bottom-color: orange;
+    border-bottom-width: 5px;
+    border-bottom: double;
+}
+
+.mybtn1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+mybtn1:hover {
+    border-radius: 10px;
+    background-color: dimgray;
+    padding: 5px;
+}
+
+li:hover {
+    border-radius: 10px;
+    background-color: dimgray;
+    padding: 0px;
+}
+
+.mybtn2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: solid;
+    border-bottom-width: medium;
+    border-bottom-color: orange;
+}
+
+mybtn2:hover {
+}

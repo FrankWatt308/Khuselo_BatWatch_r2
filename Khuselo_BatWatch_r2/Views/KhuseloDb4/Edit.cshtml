@@ -1,0 +1,79 @@
+﻿@model Khuselo_BatWatch_r2.Models.KhuseloDb4
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>KhuseloDb4</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Serial" />
+            <div class="form-group">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Branch" class="control-label"></label>
+                <input asp-for="Branch" class="form-control" />
+                <span asp-validation-for="Branch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnName" class="control-label"></label>
+                <input asp-for="TechnName" class="form-control" />
+                <span asp-validation-for="TechnName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechCell" class="control-label"></label>
+                <input asp-for="TechCell" class="form-control" />
+                <span asp-validation-for="TechCell" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateExpired" class="control-label"></label>
+                <input asp-for="DateExpired" class="form-control" />
+                <span asp-validation-for="DateExpired" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateInstalled" class="control-label"></label>
+                <input asp-for="DateInstalled" class="form-control" />
+                <span asp-validation-for="DateInstalled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChargeCycles" class="control-label"></label>
+                <input asp-for="ChargeCycles" class="form-control" />
+                <span asp-validation-for="ChargeCycles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
