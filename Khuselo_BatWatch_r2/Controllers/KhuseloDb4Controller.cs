@@ -40,23 +40,78 @@ namespace Khuselo_BatWatch_r2.Controllers
             }
 
         }
-        public async Task<IActionResult> Index2()
+        public async Task<IActionResult> Index5(string searchString)
         {
-            return _context.KhuseloDb4s != null ?
-                        View(await _context.KhuseloDb4s.ToListAsync()) :
-                        Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            ViewData["GetSearch"] = searchString;
+            var searQuery = from x in _context.KhuseloDb4s select x;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+
+                searQuery = (searQuery.Where(x => x.Serial.Equals(Convert.ToInt32(searchString))));
+                return View(await searQuery.AsNoTracking().ToListAsync());
+            }
+
+            else
+            {
+                return _context.KhuseloDb4s != null ?
+            View(await _context.KhuseloDb4s.ToListAsync()) :
+            Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            }
+
         }
-        public async Task<IActionResult> Index3()
+        public async Task<IActionResult> Index2(string searchString)
         {
-            return _context.KhuseloDb4s != null ?
-                        View(await _context.KhuseloDb4s.ToListAsync()) :
-                        Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            ViewData["GetSearch"] = searchString;
+            var searQuery = from x in _context.KhuseloDb4s select x;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+
+                searQuery = (searQuery.Where(x => x.Serial.Equals(Convert.ToInt32(searchString))));
+                return View(await searQuery.AsNoTracking().ToListAsync());
+            }
+
+            else
+            {
+                return _context.KhuseloDb4s != null ?
+            View(await _context.KhuseloDb4s.ToListAsync()) :
+            Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            }
         }
-        public async Task<IActionResult> Index4()
+        public async Task<IActionResult> Index3(string searchString)
         {
-            return _context.KhuseloDb4s != null ?
-                        View(await _context.KhuseloDb4s.ToListAsync()) :
-                        Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            ViewData["GetSearch"] = searchString;
+            var searQuery = from x in _context.KhuseloDb4s select x;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+
+                searQuery = (searQuery.Where(x => x.Serial.Equals(Convert.ToInt32(searchString))));
+                return View(await searQuery.AsNoTracking().ToListAsync());
+            }
+
+            else
+            {
+                return _context.KhuseloDb4s != null ?
+            View(await _context.KhuseloDb4s.ToListAsync()) :
+            Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            }
+        }
+        public async Task<IActionResult> Index4(string searchString)
+        {
+            ViewData["GetSearch"] = searchString;
+            var searQuery = from x in _context.KhuseloDb4s select x;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+
+                searQuery = (searQuery.Where(x => x.Serial.Equals(Convert.ToInt32(searchString))));
+                return View(await searQuery.AsNoTracking().ToListAsync());
+            }
+
+            else
+            {
+                return _context.KhuseloDb4s != null ?
+            View(await _context.KhuseloDb4s.ToListAsync()) :
+            Problem("Entity set 'Khuselo_4Context.KhuseloDb4s'  is null.");
+            }
         }
 
         // GET: KhuseloDb4/Details/5

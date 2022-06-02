@@ -5,7 +5,14 @@
 }
 
 <h1 class="mybtn2">Televonic</h1>
+<form method="get" asp-action="Index" >
+    <p>
+        <input type="search" placeholder="serial number" value="@ViewData["GetSearch"]" name="searchString" style="width:200px"/>
+        <input type="submit" value="Search" class=" btn btn-primary "/>
+        <a asp-action="index">Reset </a>
+    </p>
 
+</form>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -21,30 +28,30 @@
             <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Branch)
-            </th>
-            @*<th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.Price)
-            </th>
+                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Location)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.TechnName)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.TechCell)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.DateExpired)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.DateInstalled)
-            </th>
-            <th>
+                </th>
+                <th>
                 @Html.DisplayNameFor(model => model.ChargeCycles)
-            </th>*@
+                </th>*@
             <th></th>
         </tr>
     </thead>
@@ -64,30 +71,30 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Date)
                     </td>
-                    <td>
+                   @* <td>
                         @Html.DisplayFor(modelItem => item.Branch)
                     </td>
-                    @* <td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Price)
-                        </td>
-                        <td>
+                    </td>*@
+                    <td>
                         @Html.DisplayFor(modelItem => item.Location)
-                        </td>
-                        @*<td>
+                    </td>
+                   @* <td>
                         @Html.DisplayFor(modelItem => item.TechnName)
-                        </td>
-                        <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.TechCell)
-                        </td>
-                        <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.DateExpired)
-                        </td>
-                        <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.DateInstalled)
-                        </td>
-                        <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.ChargeCycles)
-                        </td>*@
+                    </td>*@
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Serial">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.Serial">Details</a> |
