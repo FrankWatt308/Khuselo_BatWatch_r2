@@ -7,14 +7,14 @@
 <h1 class="mybtn2">Televonic</h1>
 <form method="get" asp-action="Index" >
     <p>
-        <input type="search" placeholder="serial number" value="@ViewData["GetSearch"]" name="searchString" style="width:200px"/>
+        <input type="search" placeholder="serial number" value="@ViewData["GetSearch"]" name="searchString" style="width:200px; border-width:thin;border-color:dimgray;border-style:groove; padding:5px""/>
         <input type="submit" value="Search" class=" btn btn-primary "/>
         <a asp-action="index">Reset </a>
     </p>
 
 </form>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
 <table class="table">
     <thead>
